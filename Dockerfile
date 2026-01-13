@@ -1,6 +1,7 @@
 FROM openresty/openresty:alpine-fat
 
 RUN apk add --no-cache ca-certificates \
+ && update-ca-certificates \
  && luarocks install lua-resty-http
 
 COPY nginx.conf /usr/local/openresty/nginx/conf/nginx.conf
