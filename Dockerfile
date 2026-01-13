@@ -1,7 +1,6 @@
 FROM openresty/openresty:alpine
 
-RUN apk add --no-cache luarocks \
- && luarocks install lua-resty-http
+RUN opm get openresty/lua-resty-http
 
 COPY nginx.conf /usr/local/openresty/nginx/conf/nginx.conf
 
