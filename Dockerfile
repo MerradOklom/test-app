@@ -1,4 +1,4 @@
-FROM openresty/openresty:alpine
+FROM openresty/openresty:alpine-fat
 
 RUN opm get openresty/lua-resty-http
 
