@@ -1,6 +1,6 @@
 FROM openresty/openresty:alpine-fat
 
-RUN opm get openresty/lua-resty-http
+RUN luarocks install lua-resty-http
 
 COPY nginx.conf /usr/local/openresty/nginx/conf/nginx.conf
 
